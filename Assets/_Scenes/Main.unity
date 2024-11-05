@@ -4847,10 +4847,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1385018138}
   - component: {fileID: 1385018139}
-  - component: {fileID: 1385018141}
   - component: {fileID: 1385018140}
   - component: {fileID: 1385018142}
   - component: {fileID: 1385018143}
+  - component: {fileID: 1385018144}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -4901,18 +4901,6 @@ MonoBehaviour:
   _poolSize: 30
   _enemyProjectilePrefab: {fileID: 5165401695049654001, guid: beb48b567fe059f48b09bd472c7e854f, type: 3}
   _playerProjectilePrefab: {fileID: 9030442312924275968, guid: 10628ae22feae5740a3f7d0c1e4caa89, type: 3}
---- !u!114 &1385018141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1385018137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43cc8bf2273efa24c9d92b2331b04f3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1385018142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4943,6 +4931,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _timeBeforeRestart: 2
+--- !u!114 &1385018144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385018137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0a62cfd4b596e241b92ae866cf432a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _poolSize: 30
+  _SFXObject: {fileID: 6663756555614562868, guid: 9fb59d69bf9234e4094fd0c8e50a9782, type: 3}
+  _clips:
+  - ClipList:
+    - {fileID: 8300000, guid: 535689a23cf26ee4d8e3e141c33389de, type: 3}
+    - {fileID: 8300000, guid: ab9ebb29c0699ac4881e647a08a4264d, type: 3}
+    - {fileID: 8300000, guid: a52e596ade9776f499df8d42c4dccbf4, type: 3}
+  - ClipList:
+    - {fileID: 8300000, guid: e39d4eb939085174386dfb92a93c9da9, type: 3}
+    - {fileID: 8300000, guid: 4d89088e593d0684fa0f49213aaae0fa, type: 3}
+    - {fileID: 8300000, guid: 8c04a33627719f24b9594f1bcff862ca, type: 3}
+  - ClipList:
+    - {fileID: 8300000, guid: 1cfdbd5bc9869c242bcac304d1233ecc, type: 3}
+    - {fileID: 8300000, guid: 9ddf985a8947fdf4e87a87aa4ab8a811, type: 3}
+    - {fileID: 8300000, guid: bd7a7023a184e83469bb6a82b8674647, type: 3}
+  - ClipList:
+    - {fileID: 8300000, guid: 2fda0a43c34043c48bc47d9680c54e98, type: 3}
+  - ClipList:
+    - {fileID: 8300000, guid: ff98ea93c9718964d8fbd920c6ec7b1a, type: 3}
+  - ClipList:
+    - {fileID: 8300000, guid: e2182345554229c40af851d7b99b2f9e, type: 3}
+    - {fileID: 8300000, guid: 2c45ec42680546a4b9da3e8e2e69c468, type: 3}
+    - {fileID: 8300000, guid: 0287110835151e444a3041084d684575, type: 3}
+  - ClipList:
+    - {fileID: 8300000, guid: bc9e1d3c9eb6f7343b52880412fd7ef4, type: 3}
+  - ClipList:
+    - {fileID: 8300000, guid: 40f4b11489acd1d43963df54e46e20c1, type: 3}
+    - {fileID: 8300000, guid: 91f9321bcac597848a897c0790e39971, type: 3}
+  - ClipList:
+    - {fileID: 8300000, guid: 2af44e31afca3f54ca0a470c387e7a0c, type: 3}
+  - ClipList:
+    - {fileID: 8300000, guid: b878e11a9a370694fa8fc6bdaabe226c, type: 3}
+  - ClipList:
+    - {fileID: 8300000, guid: fa11451de2bac144aa10f3f3a7b42227, type: 3}
 --- !u!1 &1395115913
 GameObject:
   m_ObjectHideFlags: 0

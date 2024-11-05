@@ -13,14 +13,11 @@ public enum Sounds
     Attack,
     PowerUpPickup,
     SuperJump,
-    DoubleJump,
     Dash,
     Shield,
-    ShieldBounce,
     Projectile,
-    EnemyShoot,
     EnemyDeath,
-    Die,
+    Death,
     Win,
 }
 
