@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using static UnityEditor.Timeline.TimelinePlaybackControls;
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -26,8 +22,12 @@ public class PlayerAttack : MonoBehaviour
 
     void Attack()
     {
-        _coll.enabled = true;
-        _attackAnim.Play();
+        if (!_attackAnim.isPlaying)
+        {
+            _coll.enabled = true;
+            AudioManager.Instance.PlaySFXClip(Sounds.Attack);
+            _attackAnim.Play();
+        }
     }
 
     /// <summary>

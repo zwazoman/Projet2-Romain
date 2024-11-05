@@ -2,13 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(PlayerMain))]
 public class PlayerPowers : MonoBehaviour
 {
     public event Action OnPowerUse;
     public event Action OnPowerAdd;
+
+    public bool IsLocked = false;
 
     // je sais que tu veux une file Romain mais je préfère une pile ;)
     public Stack<Powers> PossessedPowers = new Stack<Powers>();
@@ -23,7 +24,7 @@ public class PlayerPowers : MonoBehaviour
 
     void UsePower()
     {
-        if(PossessedPowers.Count <= 0) return;
+        if(PossessedPowers.Count <= 0 || IsLocked) return;
         Powers currentPower = PossessedPowers.Peek();
         if (!currentPower.IsUsable()) return;
         PossessedPowers.Pop();

@@ -1,7 +1,4 @@
 using UnityEngine;
-using UnityEditor.SceneManagement;
-using UnityEngine.SceneManagement;
-using System.Collections;
 
 [RequireComponent(typeof(PlayerMain))]
 [RequireComponent(typeof(Collider2D))]
@@ -24,6 +21,7 @@ public class PlayerCollision : MonoBehaviour
     {
         if (collision.gameObject.transform.position.y < transform.position.y && collision.gameObject.layer == 6)
         {
+            AudioManager.Instance.PlaySFXClip(Sounds.Fall, 0.5f);
             _main.Movement.IsGrounded = true;
         }
     }
@@ -39,6 +37,7 @@ public class PlayerCollision : MonoBehaviour
 
     public void Die()
     {
+        AudioManager.Instance.PlaySFXClip(Sounds.Death);
         GameManager.Instance.RestartLevel("T'es mort, pas ouf.");
     }
 

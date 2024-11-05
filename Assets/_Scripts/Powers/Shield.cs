@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using System.Threading.Tasks;
-using UnityEngine;
 
 public class Shield : Powers
 {
@@ -12,6 +9,7 @@ public class Shield : Powers
 
     public override async void Activate()
     {
+        AudioManager.Instance.PlaySFXClip(Sounds.Shield);
         await StartShielding();
     }
 

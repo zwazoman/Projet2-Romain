@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Turrets : MonoBehaviour
@@ -41,6 +39,7 @@ public class Turrets : MonoBehaviour
 
     protected virtual void Shoot()
     {
+        AudioManager.Instance.PlaySFXClip(Sounds.Projectile);
         ProjectilePoolManager.Instance.TakeFromPool(_barrel.transform.position,_barrel.transform.rotation,transform.localScale,ProjectilePoolManager.Instance.EnemyProjectilePool);
     }
 }

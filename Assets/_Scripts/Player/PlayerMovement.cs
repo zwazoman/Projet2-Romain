@@ -59,6 +59,7 @@ public class PlayerMovement : MonoBehaviour
         if (IsGrounded && !isReleased)
         {
             RB.velocity = new Vector2(RB.velocity.x,_jumpPower);
+            AudioManager.Instance.PlaySFXClip(Sounds.Jump);
             IsGrounded = false;
         }
         if (isReleased && RB.velocity.y > 0)

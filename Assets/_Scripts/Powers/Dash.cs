@@ -1,13 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using System.Threading.Tasks;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Dash : Powers
 {
     public override async void Activate()
     {
+        AudioManager.Instance.PlaySFXClip(Sounds.Dash);
         await DashAsync();
     }
 
@@ -18,9 +16,11 @@ public class Dash : Powers
         float oldGravityScale = playerRB.gravityScale;
         playerRB.gravityScale = 0f;
         PlayerMain.Instance.Movement.IsLocked = true;
+        PlayerMain.Instance.Powers.IsLocked = true;
         Impulse(direction, 30);
         await Task.Delay(200);
         if(playerRB != null) playerRB.gravityScale = oldGravityScale;
         PlayerMain.Instance.Movement.IsLocked = false;
+        PlayerMain.Instance.Powers.IsLocked = false;
     }
 }
